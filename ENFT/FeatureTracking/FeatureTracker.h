@@ -156,8 +156,9 @@ class FeatureTracker : private ViewerSequence {
     TextureGL3                      m_texRGB;
     TextureGL1                      m_texGray;
     ProgramGLConvertRGB2Gray        m_programConvertRGB2Gray;
-
+public:
     FeatureExtractorSift    m_ftrExtractorSift;
+protected:
     FeatureMatcherSift      m_ftrMatcherSift;
     FeatureTrackerEnft      m_ftrTrackerEnft;
 

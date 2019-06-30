@@ -5,15 +5,17 @@ window_width = 960
 window_height = 540 
  
 # input sequence, image filename format: %d.png 
-video_0_image = E:/Data/Plant/00000000.jpg 
+video_0_image = E:/Projs/enft/data/plant/plant/00000000.jpg 
 # the start/end frame index  
+# 0  1 1200
 video_0_start = 0
-video_0_step = 3 
-video_0_end = 1200
+video_0_step = 10 
+video_0_end = 120
 
-video_1_image = E:/Data/Plant/00000000.jpg 
+video_1_image = E:/Projs/enft/data/plant/plant/00000000.jpg 
+# 1100  10 2415
 video_1_start = 1100
-video_1_step = 3 
+video_1_step = 10 
 video_1_end = 2415
  
 # intrinsic params, format: fx fy cx cy 
@@ -29,6 +31,6 @@ min_frame_number = -1
 max_frame_number = -1
 
 # if save temporary file, when file exist, load them and skip corresponding steps(yes - 1, no -
-use_temporary_file = 1 
+use_temporary_file = 1
 # if visual results(yes - 1, no - 0) 
 view = 1 

@@ -2,7 +2,7 @@
 #define CVD_INC_INTERNAL_WIN_H
 
 	// make sure to have all necessary definitions included, this requires min Windows 2000
-	#define _WIN32_WINNT 0x0500
+	//#define _WIN32_WINNT 0x0500
 
 	// missing C99 define (C99 not supported in VC++)
 #ifdef __MINGW32__

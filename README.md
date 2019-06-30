@@ -1,4 +1,4 @@
-﻿# ENFT-SfM
+# ENFT-SfM
 
 **Current version**: 1.0
 
@@ -73,26 +73,53 @@ make -j4
 We provide three configuration file example in `ENFT\config\`, which show how to run ENFT-SfM in single sequence mode ( support varying focal length and constant focal length datasets) and multiple sequences mode (the camera intrinsic parameters should be known). Please refer to **Dataset** part to download these corresponding datasets.
 
 1. `videos_number` is the number of videos.
-
 2. `window_width` and `window_height` indicate the size of window.
-
 3. `video_i_*`give the information of the i'th video.
-
 4. `calib_file_name` is the file name which provide the camera intrinsic parameters (fx,fy,cx,cy). If not provided, the system will assume the focal length is contant but unkown (if const_focal = 1) or varied (if const_focal = 0).
-
 5. `const_focal` will be used when calib_file_name not given, set 1 if the focal length of the camera is constant.
-
 6. `radio_distortion` set 1 when camera distortion not rectified.
-
 7. `param_directory` is the param file directory and it contains the detailed params of tracking and bundle adjustment.
-
 8. `output_directory` is the output file directory, it would be the video directory when not given or do not exist.
-
 9. `min_frame_number` and `max_frame_number` is the param of segmentBA for spliting a video to several sequences.
-
 10. `use_temporary_file` set 1 to save ACT files and reuse (if exist) temporary binary files (e.g. v0.txt) for some steps in SfM.
-
 11. `view` set 1 to show the result.
+
+
+
+#### viewer
+
+Fn + Space,  to view the point cloud
+
+s , screen grab save
+
+d, back
+
+f, front
+
+p, draw point mode
+
+z, CONTROL_TRANSLATE_Z
+
+x, CONTROL_TRANSLATE_XY
+
+c, DRAW_PATH, ...
+
+b, plate ?
+
+k, background color
+
+t, change to the camera point
+
+r, rotation
+
+double click a point, the frame line will blue mark the images.
+
+
+
+
+
+
+
 
 
 
@@ -105,5 +132,5 @@ We provide three configuration file example in `ENFT\config\`, which show how to
 
 #### Note
 
-1. For Windows: To ensure that the program works properly, it is recommended to adjust the graphic card priority in NVidia control pannel, and use the NVidia graphics card (recommend NVidia GTX 780 or above) for ENFT executable program.
+1. For Windows: To ensure that the program works properly, **it is recommended to adjust the graphic card priority in NVidia control pannel, and use the NVidia graphics card** (recommend NVidia GTX 780 or above) for ENFT executable program.
 2. For Linux: Currently,  the Linux version may be not as efficient as that of the Windows version. It still has problems to run with NVidia driver. So for running the program properly, it is recommended to switch the graphic driver to nouveau. We will try to address this problem in the future.

@@ -131,11 +131,9 @@ void ViewerSequenceDepth::ComputeLocalCoordinate(const FrameIndex
 void ViewerSequenceDepth::DrawFrameImageFileName() {
     glColor3ub(STRING_COLOR_R, STRING_COLOR_G, STRING_COLOR_B);
     if(m_depView)
-        Viewer::DrawStringTopLeftLarge("%s",
-                                       ((SequenceDepth *) m_pSeq)->GetDepthFileName(m_iFrmActive).c_str());
+        Viewer::DrawStringTopLeftLarge("%s",((SequenceDepth *) m_pSeq)->GetDepthFileName(m_iFrmActive).c_str());
     else
-        Viewer::DrawStringTopLeftLarge("%s",
-                                       m_pSeq->GetImageFileName(m_iFrmActive).c_str());
+        Viewer::DrawStringTopLeftLarge("%s", m_pSeq->GetImageFileName(m_iFrmActive).c_str());
 }
 
 void ViewerSequenceDepth::DrawSceneView() {
@@ -168,8 +166,7 @@ void ViewerSequenceDepth::DrawSceneView() {
         DrawScenePoints();
     //if(m_drawCamType != DRAW_NO_CAMERA)
     //  DrawSceneCameras();
-    if(m_iTrkSelected != INVALID_TRACK_INDEX &&
-            (m_pSeq->GetTrackState(m_iTrkSelected) & FLAG_TRACK_STATE_SOLVED))
+    if(m_iTrkSelected != INVALID_TRACK_INDEX && (m_pSeq->GetTrackState(m_iTrkSelected) & FLAG_TRACK_STATE_SOLVED))
         DrawSelectedScenePoint();
     if(m_drawActivePts)
         DrawActiveScenePoints();

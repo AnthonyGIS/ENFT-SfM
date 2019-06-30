@@ -66,17 +66,18 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
         V.SetCalib(calibFileName, const_focal);
 
         // Initiation every parts
+		ftrTracker.m_ftrExtractorSift.m_tmpTex.Delete(); // weng added
         ftrTracker.Initialize(V, paramDir + "param_ftr_tracking.txt");
         trkMatcher1.Initialize(V, paramDir + "param_trk_matching.txt");
         camTracker.Initialize(V, paramDir + "param_cam_tracking.txt", !distortion);
         seqRegister.Initialize(Vs, paramDir + "param_seq_registration.txt", !distortion);
 
         // If useTmpFile, try to load V.txt
-        const std::string outputDir = strcmp(outputDir_s,
-                                             "") == 0 ? V.GetDirectory() : std::string(outputDir_s);
+        const std::string outputDir = strcmp(outputDir_s, "") == 0 ? V.GetDirectory() : std::string(outputDir_s);
         char fileName[MAX_LINE_LENGTH];
         sprintf(fileName, "v%d.txt", iVideo);
         if (useTmpFile && V.LoadBwithDir((outputDir + fileName).c_str())) {
+			printf("\nDone %d video! using tmp file. -- WENG\n", iVideo);
             continue;
         }
 
@@ -130,7 +131,11 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
             sprintf(fileName, "v%d.act", iVideo);
             V.SaveAct((outputDir + fileName).c_str());
         }
+		printf("\nDone %d video! -- WENG\n",iVideo);
     }
+	printf("\nDone! Init SequenceSet.--WENG\n");
+
+
 
     if (video_num > 1) {
         int iVideo1, iVideo2;
@@ -202,6 +207,7 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
         }
     }
 
+	printf("\nAll,done! --WENG\n");
     if (view) {
         if (video_num > 1) {
             ViewerSequenceSet viewer;
@@ -213,7 +219,7 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
     }
 }
 
-int main(int argc, char *argv[]) {
+ int main(int argc, char *argv[]) {
     // Load Config
     if (argc != 2) {
         printf("Usage: %s <path-to-config>\n", argv[0]);

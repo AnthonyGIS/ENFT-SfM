@@ -126,7 +126,7 @@ private:
 	std::string m_seqDir, m_seqName;
 	int m_iStart, m_iStep, m_iEnd;
 	ushort m_width, m_height;
-	std::vector<std::string> m_imgFileNames;
+	std::vector<std::string> m_imgFileNames; // Í¼ÏñÎÄ¼şĞòÁĞ
 
 };
 

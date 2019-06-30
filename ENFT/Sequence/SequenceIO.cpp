@@ -91,7 +91,7 @@ bool Sequence::HasSwappedOut() const {
     char buf[MAX_LINE_LENGTH];
     sprintf(buf, "seq_%d-%d-%d.txt", GetStartFrame(), GetStepFrame(),
             GetEndFrame());
-    return access((GetDirectory() + buf).c_str(), 0) == 0;
+    return _access((GetDirectory() + buf).c_str(), 0) == 0;
 }
 
 void Sequence::SwapOut() {

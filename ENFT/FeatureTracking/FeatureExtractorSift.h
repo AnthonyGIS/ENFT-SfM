@@ -194,7 +194,9 @@ private:
 	std::vector<TextureGL4> m_ftrTexs, m_descTexs, m_ftrHistTexs;
 	TextureGL1 m_idxTex1;
 	TextureGL2 m_idxTex2;
+public:
 	TextureGL4 m_tmpTex;
+private:
 	ushort m_widthInit, m_heightInit, m_widthInitPacked, m_heightInitPacked, m_nOctaves, m_nLevelsDoG, m_nLevels, m_bufferSize;
 	ushort m_maxNumFtrsExtracted, m_maxNumFtrsAdditional, m_minDist;
 	ushort m_ftrTexWidth, m_ftrTexWidthLog, m_descTexWidth, m_descTexWidthLog, m_idxTexWidth, m_idxTexWidthLog;

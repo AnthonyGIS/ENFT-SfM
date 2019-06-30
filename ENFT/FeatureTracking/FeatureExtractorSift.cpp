@@ -99,11 +99,11 @@ void FeatureExtractorSift::Initialize(const ushort &widthInit, const ushort &hei
     m_descTexWidthLog = m_ftrTexWidthLog + 4;
     m_idxTexWidth = idxTexWidth;
     m_idxTexWidthLog = m_ftrTexWidthLog;
-#if _DEBUG
-    assert(ftrTexWidth <= m_widthInitPacked);
-    assert((1 << m_ftrTexWidthLog) == ftrTexWidth);
-    assert((1 << m_descTexWidthLog) == descTexWidth);
-#endif
+	#if _DEBUG
+		assert(ftrTexWidth <= m_widthInitPacked);
+		assert((1 << m_ftrTexWidthLog) == ftrTexWidth);
+		assert((1 << m_descTexWidthLog) == descTexWidth);
+	#endif
     const ushort bufferSize_p1 = bufferSize + 1;
     m_ftrTexs.resize(bufferSize_p1);
     m_descTexs.resize(bufferSize_p1);

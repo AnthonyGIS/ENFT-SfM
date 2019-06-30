@@ -119,13 +119,12 @@ void SequenceRegisteror::Run(SequenceSet &seqs,
             GetIncrementalSequence(m_seqsKF, iSeqIncr, nTrksCmnIncr);
             if(iSeqIncr == INVALID_SEQUENCE_INDEX)
                 break;
-            RegisterSequence_MarkCommonOutliers(iSeqIncr, m_seqsKF,
-                                                m_seqErrLevels[iSeqIncr]);
-//#if _DEBUG
-#if 0
-            m_stop = stopBkp;
-            ViewSequences(m_seqsKF, iSeqInit);
-#endif
+            RegisterSequence_MarkCommonOutliers(iSeqIncr, m_seqsKF, m_seqErrLevels[iSeqIncr]);
+	//#if _DEBUG
+	#if 0
+				m_stop = stopBkp;
+				ViewSequences(m_seqsKF, iSeqInit);
+	#endif
         }
         timer.Stop(1);
         if(tmpFileNameLocal != "")
@@ -139,8 +138,7 @@ void SequenceRegisteror::Run(SequenceSet &seqs,
         SequenceIndexList iSeqsAdj3D;
         //m_seqsKF.GetSequenceIndexList(FLAG_SEQUENCE_STATE_REGISTRED, iSeqsAdj3D);
         for(SequenceIndex iSeq = 0; iSeq < nSeqs; ++iSeq) {
-            if(iSeq != iSeqInit &&
-                    (m_seqsKF.GetSequenceState(iSeq) & FLAG_SEQUENCE_STATE_REGISTRED))
+            if(iSeq != iSeqInit && (m_seqsKF.GetSequenceState(iSeq) & FLAG_SEQUENCE_STATE_REGISTRED))
                 iSeqsAdj3D.push_back(iSeq);
         }
         BundleAdjust3D(iSeqsAdj3D, m_iSeqsBA, m_iTrksCmnBA, m_seqsKF);
@@ -153,8 +151,7 @@ void SequenceRegisteror::Run(SequenceSet &seqs,
 
     if(tmpFileNameBA == "" || !m_seqsKF.LoadB(tmpFileNameBA.c_str())) {
         timer.Start(3);
-        BundleAdjust2DAdaptiveErrorLevelGlobal(TsList, iSeqInit, m_seqsKF,
-                                               m_seqErrLevels);
+        BundleAdjust2DAdaptiveErrorLevelGlobal(TsList, iSeqInit, m_seqsKF, m_seqErrLevels);
         timer.Stop(3);
         if(tmpFileNameBA != "")
             m_seqsKF.SaveB(tmpFileNameBA.c_str());
