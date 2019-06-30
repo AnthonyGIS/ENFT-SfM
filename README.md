@@ -86,7 +86,7 @@ We provide three configuration file example in `ENFT\config\`, which show how to
 
 
 
-#### viewer
+#### Viewer
 
 Fn + Space,  to view the point cloud
 
