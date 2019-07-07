@@ -10,9 +10,6 @@
     <Filter Include="LinearAlgebra">
       <UniqueIdentifier>{b4548d1d-27ab-455c-938b-552a618d89ad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Optimization">
-      <UniqueIdentifier>{28c7317f-68ba-4599-acef-4af2afff1a24}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Sequence">
       <UniqueIdentifier>{4f29860b-f603-4f35-b621-dac06deb51de}</UniqueIdentifier>
     </Filter>
@@ -34,9 +31,6 @@
     <Filter Include="param">
       <UniqueIdentifier>{ccc18aa3-9a93-4215-a3f1-23e9c3270a13}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Optimization\ProgramGL">
-      <UniqueIdentifier>{56baeff7-6a20-4fd5-aed5-8086506f739c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CameraTracking">
       <UniqueIdentifier>{d779c8b8-322f-42cc-bacd-7009efc7c873}</UniqueIdentifier>
     </Filter>
@@ -45,6 +39,15 @@
     </Filter>
     <Filter Include="Utility\linux">
       <UniqueIdentifier>{30048a84-06d0-409f-8c25-611aab0a6f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimization">
+      <UniqueIdentifier>{28c7317f-68ba-4599-acef-4af2afff1a24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimization\ProgramGL">
+      <UniqueIdentifier>{56baeff7-6a20-4fd5-aed5-8086506f739c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{9c271b0a-5e08-4e0f-b753-9be986e6906b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -999,8 +1002,26 @@
     <ClCompile Include="ENFT.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\config\config_gangwan.txt" />
-    <Text Include="..\config\config_KITTI.txt" />
-    <Text Include="..\config\config_plant.txt" />
+    <Text Include="..\config\config_gangwan.txt">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="..\config\config_KITTI.txt">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="..\config\config_plant.txt">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="..\config\config_road_1.txt">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="..\config\config_road_2.txt">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="..\config\config_road_3.txt">
+      <Filter>Config</Filter>
+    </Text>
+    <Text Include="..\config\config_stone_1.txt">
+      <Filter>Config</Filter>
+    </Text>
   </ItemGroup>
 </Project>

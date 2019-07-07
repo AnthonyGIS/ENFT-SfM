@@ -88,6 +88,8 @@ We provide three configuration file example in `ENFT\config\`, which show how to
 
 #### Viewer
 
+the sort cut key for the viewer are as follows:
+
 Fn + Space,  to view the point cloud
 
 s , screen grab save
@@ -113,12 +115,6 @@ t, change to the camera point
 r, rotation
 
 double click a point, the frame line will blue mark the images.
-
-
-
-
-
-
 
 
 

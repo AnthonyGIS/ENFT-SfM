@@ -1,0 +1,165 @@
+﻿  stdafx.cpp
+  CameraTracker.cpp
+e:\projs\enft\enft\enft\cameratracking\cameratracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  CameraTrackerDepth.cpp
+e:\projs\enft\enft\enft\cameratracking\cameratracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  CameraTrackerDepthIO.cpp
+e:\projs\enft\enft\enft\cameratracking\cameratracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  CameraTrackerDepthSfM.cpp
+e:\projs\enft\enft\enft\cameratracking\cameratracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  CameraTrackerIO.cpp
+e:\projs\enft\enft\enft\cameratracking\cameratracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  CameraTrackerSfM.cpp
+e:\projs\enft\enft\enft\cameratracking\cameratracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  ENFT.cpp
+e:\projs\enft\enft\enft\programgl\texturegl.h(24): fatal error C1083: 无法打开包括文件: “GL/glew.h”: No such file or directory
+  FeatureExtractorSift.cpp
+e:\projs\enft\enft\enft\featuretracking\featureextractorsift.h(23): fatal error C1083: 无法打开包括文件: “SfM/Match.h”: No such file or directory
+  FeatureTracker.cpp
+e:\projs\enft\enft\enft\featuretracking\featuretracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  FeatureTrackerEnft.cpp
+e:\projs\enft\enft\enft\featuretracking\featuretracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  FeatureTrackerFlowVoting.cpp
+e:\projs\enft\enft\enft\featuretracking\featuretracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  FeatureTrackerIO.cpp
+e:\projs\enft\enft\enft\featuretracking\featuretracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  FeatureTrackerSift.cpp
+e:\projs\enft\enft\enft\featuretracking\featuretracker.h(23): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequence.h”: No such file or directory
+  Matrix11.cpp
+e:\projs\enft\enft\enft\linearalgebra\vector8.h(23): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  Matrix3.cpp
+e:\projs\enft\enft\enft\linearalgebra\matrix3.h(23): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  Matrix4.cpp
+e:\projs\enft\enft\enft\linearalgebra\matrix2.h(24): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  Matrix5.cpp
+e:\projs\enft\enft\enft\linearalgebra\vector4.h(23): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  Matrix6.cpp
+e:\projs\enft\enft\enft\linearalgebra\matrix6.h(23): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  Matrix7.cpp
+e:\projs\enft\enft\enft\linearalgebra\vector7.h(24): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  Matrix8.cpp
+e:\projs\enft\enft\enft\linearalgebra\matrix2.h(24): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  正在生成代码...
+  正在编译...
+  MatrixMxN.cpp
+e:\projs\enft\enft\enft\linearalgebra\matrixmxn.h(23): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  ProgramGL.cpp
+e:\projs\enft\enft\enft\programgl\texturegl.h(23): fatal error C1083: 无法打开包括文件: “Utility/Table.h”: No such file or directory
+  SequenceRegisteror.cpp
+e:\projs\enft\enft\enft\sequenceregistration\sequenceregisteror.h(26): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequenceSet.h”: No such file or directory
+  SequenceRegisterorIO.cpp
+e:\projs\enft\enft\enft\sequenceregistration\sequenceregisteror.h(26): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequenceSet.h”: No such file or directory
+  SequenceRegisterorSegmentation.cpp
+e:\projs\enft\enft\enft\sequenceregistration\sequenceregisteror.h(26): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequenceSet.h”: No such file or directory
+  SequenceRegisterorSfM.cpp
+e:\projs\enft\enft\enft\sequenceregistration\sequenceregisteror.h(26): fatal error C1083: 无法打开包括文件: “Viewing/ViewerSequenceSet.h”: No such file or directory
+  SegmentSetBundleAdjustorData2DSimilarity.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSet.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSetBundleAdjustment.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSetBundleAdjustorData3DSimilarity.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSetDataAssociation.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSetFrame.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSetIO.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSetMeasurement.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSetTrack.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceTransformationOptimizerDataSimilarity.cpp
+e:\projs\enft\enft\enft\sequenceset\sequenceset.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  Sequence.cpp
+e:\projs\enft\enft\enft\sequence\sequence.h(24): fatal error C1083: 无法打开包括文件: “SfM/IntrinsicMatrix.h”: No such file or directory
+  SequenceBundleAdjustment.cpp
+e:\projs\enft\enft\enft\sequence\sequencebundleadjustment.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceBundleAdjustorData.cpp
+e:\projs\enft\enft\enft\sequence\sequencebundleadjustordata.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceBundleAdjustorDataDepth.cpp
+e:\projs\enft\enft\enft\sequence\sequencebundleadjustordatadepth.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/SequenceBundleAdjustorDataDepth.h”: No such file or directory
+  正在生成代码...
+  正在编译...
+  SequenceBundleAdjustorDataIntrinsicVariable.cpp
+e:\projs\enft\enft\enft\sequence\sequencebundleadjustordataintrinsicvariable.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceBundleAdjustorDataProjective.cpp
+e:\projs\enft\enft\enft\sequence\sequencebundleadjustordataprojective.h(23): fatal error C1083: 无法打开包括文件: “Optimization/BundleAdjustorData.h”: No such file or directory
+  SequenceDataAssociation.cpp
+e:\projs\enft\enft\enft\sequence\sequencedataassociation.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceDepth.cpp
+e:\projs\enft\enft\enft\sequence\sequencedepth.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceFrame.cpp
+e:\projs\enft\enft\enft\sequence\sequenceframe.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceIO.cpp
+e:\projs\enft\enft\enft\sequence\sequenceio.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceMeasurement.cpp
+e:\projs\enft\enft\enft\sequence\sequencemeasurement.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceSynthesis.cpp
+e:\projs\enft\enft\enft\sequence\sequencesynthesis.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceTag.cpp
+e:\projs\enft\enft\enft\sequence\sequencetag.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/SequenceTag.h”: No such file or directory
+  SequenceTrack.cpp
+e:\projs\enft\enft\enft\sequence\sequencetrack.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  SequenceTransformation.cpp
+e:\projs\enft\enft\enft\sequence\sequencetransformation.cpp(21): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  AbsoluteQuadricEstimator.cpp
+e:\projs\enft\enft\enft\sfm\absolutequadric.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Vector5.h”: No such file or directory
+  CameraArrayEPnP.cpp
+e:\projs\enft\enft\enft\sfm\cameraarray.h(23): fatal error C1083: 无法打开包括文件: “SfM/Camera.h”: No such file or directory
+  CameraEPnP.cpp
+e:\projs\enft\enft\enft\sfm\cameraepnp.h(23): fatal error C1083: 无法打开包括文件: “SfM/Camera.h”: No such file or directory
+  EssentialMatrix.cpp
+e:\projs\enft\enft\enft\sfm\point.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Vector2.h”: No such file or directory
+  EssentialMatrixFivePointAlgorithm.cpp
+e:\projs\enft\enft\enft\sfm\point.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Vector2.h”: No such file or directory
+  FundamentalMatrix.cpp
+e:\projs\enft\enft\enft\sfm\point.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Vector2.h”: No such file or directory
+  FundamentalMatrixEightPointAlgorithm.cpp
+e:\projs\enft\enft\enft\sfm\fundamentalmatrixeightpointalgorithm.h(23): fatal error C1083: 无法打开包括文件: “SfM/FundamentalMatrix.h”: No such file or directory
+  Homography.cpp
+e:\projs\enft\enft\enft\sfm\affinetransformation.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix2x3.h”: No such file or directory
+  HomographySolver.cpp
+e:\projs\enft\enft\enft\sfm\affinetransformation.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix2x3.h”: No such file or directory
+  正在生成代码...
+  正在编译...
+  PlaneSolver.cpp
+e:\projs\enft\enft\enft\sfm\plane.h(23): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  Point3DSolver.cpp
+e:\projs\enft\enft\enft\sfm\rotationtransformation.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix2.h”: No such file or directory
+  ProjectiveMatrix.cpp
+e:\projs\enft\enft\enft\sfm\projectivematrix.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix3x4.h”: No such file or directory
+  ProjectiveMatrixSolver.cpp
+e:\projs\enft\enft\enft\sfm\projectivematrix.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix3x4.h”: No such file or directory
+  RelativeTranslationSolver.cpp
+e:\projs\enft\enft\enft\sfm\relativetranslationsolver.h(23): fatal error C1083: 无法打开包括文件: “SfM/Match.h”: No such file or directory
+  RigidTransformationSolver.cpp
+e:\projs\enft\enft\enft\sfm\rotationtransformation.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix2.h”: No such file or directory
+  RotationTransformationSolver.cpp
+e:\projs\enft\enft\enft\sfm\rotationtransformation.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix2.h”: No such file or directory
+  SimilarityTransformationSolver.cpp
+e:\projs\enft\enft\enft\sfm\rotationtransformation.h(23): fatal error C1083: 无法打开包括文件: “LinearAlgebra/Matrix2.h”: No such file or directory
+  TranslationSolver.cpp
+e:\projs\enft\enft\enft\sfm\intrinsicmatrix.h(23): fatal error C1083: 无法打开包括文件: “Utility/SSE.h”: No such file or directory
+  MatchingMatrix.cpp
+e:\projs\enft\enft\enft\trackmatching\matchingmatrix.h(23): fatal error C1083: 无法打开包括文件: “Sequence/Sequence.h”: No such file or directory
+  TrackMatcher.cpp
+e:\projs\enft\enft\enft\trackmatching\trackmatcher.h(23): fatal error C1083: 无法打开包括文件: “Viewing/Viewer.h”: No such file or directory
+  TrackMatcherClustering.cpp
+e:\projs\enft\enft\enft\trackmatching\trackmatcher.h(23): fatal error C1083: 无法打开包括文件: “Viewing/Viewer.h”: No such file or directory
+  TrackMatcherEnft.cpp
+e:\projs\enft\enft\enft\trackmatching\trackmatcher.h(23): fatal error C1083: 无法打开包括文件: “Viewing/Viewer.h”: No such file or directory
+  TrackMatcherIO.cpp
+e:\projs\enft\enft\enft\trackmatching\trackmatcher.h(23): fatal error C1083: 无法打开包括文件: “Viewing/Viewer.h”: No such file or directory
+  TrackMatchingFeatureMatching.cpp
+e:\projs\enft\enft\enft\trackmatching\trackmatcher.h(23): fatal error C1083: 无法打开包括文件: “Viewing/Viewer.h”: No such file or directory
+  Polynomial.cpp
+  ViewerSequence.cpp
+e:\projs\enft\enft\enft\viewing\viewer.h(23): fatal error C1083: 无法打开包括文件: “ProgramGL/ProgramGL.h”: No such file or directory
+  ViewerSequenceDepth.cpp
+e:\projs\enft\enft\enft\viewing\viewer.h(23): fatal error C1083: 无法打开包括文件: “ProgramGL/ProgramGL.h”: No such file or directory
+  ViewerSequenceSet.cpp
+e:\projs\enft\enft\enft\viewing\viewer.h(23): fatal error C1083: 无法打开包括文件: “ProgramGL/ProgramGL.h”: No such file or directory
+  正在生成代码...
