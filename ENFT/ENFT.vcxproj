@@ -489,6 +489,8 @@
     <ClCompile Include="Viewing\ViewerSequenceSet.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\config\config_0707_road_1_seg_2_3.txt" />
+    <Text Include="..\config\config_0707_road_2.txt" />
     <Text Include="..\config\config_gangwan.txt" />
     <Text Include="..\config\config_KITTI.txt" />
     <Text Include="..\config\config_plant.txt" />

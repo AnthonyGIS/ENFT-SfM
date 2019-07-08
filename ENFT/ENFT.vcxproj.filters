@@ -49,6 +49,12 @@
     <Filter Include="Config">
       <UniqueIdentifier>{9c271b0a-5e08-4e0f-b753-9be986e6906b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Config\0701">
+      <UniqueIdentifier>{13649794-a20b-4bcb-8914-096a00460984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\0706">
+      <UniqueIdentifier>{8481c010-1169-4770-8bff-ae2ae5260ec4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="param\param_ftr_tracking.txt">
@@ -1012,16 +1018,22 @@
       <Filter>Config</Filter>
     </Text>
     <Text Include="..\config\config_road_1.txt">
-      <Filter>Config</Filter>
+      <Filter>Config\0701</Filter>
     </Text>
     <Text Include="..\config\config_road_2.txt">
-      <Filter>Config</Filter>
+      <Filter>Config\0701</Filter>
     </Text>
     <Text Include="..\config\config_road_3.txt">
-      <Filter>Config</Filter>
+      <Filter>Config\0701</Filter>
     </Text>
     <Text Include="..\config\config_stone_1.txt">
-      <Filter>Config</Filter>
+      <Filter>Config\0701</Filter>
+    </Text>
+    <Text Include="..\config\config_0707_road_2.txt">
+      <Filter>Config\0706</Filter>
+    </Text>
+    <Text Include="..\config\config_0707_road_1_seg_2_3.txt">
+      <Filter>Config\0706</Filter>
     </Text>
   </ItemGroup>
 </Project>

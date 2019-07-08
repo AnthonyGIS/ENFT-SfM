@@ -8,11 +8,11 @@ For ENFT(**E**fficient **N**on-consecutive **F**eature **T**racking) method impl
 
 For Segment-Based Bundle Adjustment implementation, please go to [SegmentBA](https://github.com/ZJUCVG/SegmentBA).
 
-## 1. Introduction
+# 1. Introduction
 
-ENFT (**E**fficient **N**on-consecutive **F**eature **T**racking) is a feature tracking method which can efficiently match feature point correspondences among one or multiple video sequences. ENFT-SfM is a complete structure-from-motion system which uses ENFT method for feature tracking and SegmentBA for bundle adjustment optimization.
+ENFT (Efficient Non-consecutive Feature Tracking) is a feature tracking method which can efficiently match feature point correspondences among one or multiple video sequences. ENFT-SfM is a complete structure-from-motion system which uses ENFT method for feature tracking and SegmentBA for bundle adjustment optimization.
 
-## 2. Related Publications
+# 2. Related Publications
 
 
 [1] Guofeng Zhang*, Haomin Liu, Zilong Dong, Jiaya Jia, Tien-Tsin Wong, and Hujun Bao*. **Efficient Non-Consecutive Feature Tracking for Robust Structure-from-Motion**. IEEE Transactions on Image Processing, 25(12): 5957 – 5970, 2016.
@@ -20,7 +20,7 @@ ENFT (**E**fficient **N**on-consecutive **F**eature **T**racking) is a feature t
 
 [2] Guofeng Zhang, Zilong Dong, Jiaya Jia, Tien-Tsin Wong, and Hujun Bao. **Efficient Non-Consecutive Feature Tracking for Structure-from-Motion**. *European Conference on Computer Vision (ECCV)*, 2010.
 
-## 3. License
+# 3. License
 
 
 This software is for non-commercial use only. Any modification based on this work must be open source and prohibited for commercial use.
@@ -40,7 +40,7 @@ If you use this source code for your academic publication, please cite our TIP p
 	  year={2016}
 	}
 ​	
-## 4. Dependencies
+# 4. Dependencies
 
 - [GLUT](https://www.opengl.org/resources/libraries/glut/)
 - [GLEW](http://glew.sourceforge.net/)
@@ -49,7 +49,7 @@ If you use this source code for your academic publication, please cite our TIP p
 - [LEVMAR - 2.6](http://www.ics.forth.gr/~lourakis/levmar/)
 
 
-## 5. Usage
+# 5. Usage
 
 The project has been tested in Visual Studio 2015 and 16.04 (GCC Version > 5.4). We provide almost all the prebuilt x64 libraries in`3rdparty/`. You can run the program directly under the default project setting.
 
@@ -68,7 +68,7 @@ make -j4
 ./runENFT path/to/your/config.txt
 ```
 
-#### Configuration File
+Configuration File
 
 We provide three configuration file example in `ENFT\config\`, which show how to run ENFT-SfM in single sequence mode ( support varying focal length and constant focal length datasets) and multiple sequences mode (the camera intrinsic parameters should be known). Please refer to **Dataset** part to download these corresponding datasets.
 
@@ -86,47 +86,44 @@ We provide three configuration file example in `ENFT\config\`, which show how to
 
 
 
-#### Viewer
+
+
+## Viewer
 
 the sort cut key for the viewer are as follows:
 
-Fn + Space,  to view the point cloud
+| key        | description             | key          | description                               |
+| ---------- | ----------------------- | ------------ | ----------------------------------------- |
+| Fn + Space | to view the point cloud | k            | background color                          |
+| s, F4      | screen grab save        | t            | change to the camera point                |
+| d          | back                    | r、F3        | rotation                                  |
+| f          | front                   | e            | light lines from point to camera          |
+| p、F1      | draw point mode         | d-click a pt | the frame line will blue mark the images. |
+| z          | CONTROL_TRANSLATE_Z     | F2           | sequences draw mode                       |
+| x          | CONTROL_TRANSLATE_XY    |              |                                           |
+| c          | DRAW_PATH, ...          |              |                                           |
+| b          | plate ?                 |              |                                           |
 
-s , screen grab save
+## Coding manner
 
-d, back
+ftr, stands for feature.
 
-f, front
-
-p, draw point mode
-
-z, CONTROL_TRANSLATE_Z
-
-x, CONTROL_TRANSLATE_XY
-
-c, DRAW_PATH, ...
-
-b, plate ?
-
-k, background color
-
-t, change to the camera point
-
-r, rotation
-
-double click a point, the frame line will blue mark the images.
+trk, tracker
 
 
 
 
-#### Dataset
+
+## Dataset
 
 - Single Sequence Datasets
   - Varying Focal Length "Plant" ([Our Website](http://www.cad.zju.edu.cn/home/gfzhang/projects/tracking/featuretracking/data/plant.rar)) , use `config_plant.txt` 
   - Constant Focal Length "KITTI Seq00" ( [Google Drive](https://drive.google.com/file/d/1hvpwvf6Y9tTcIniI4fgXg_I02nrrbDbD/view?usp=sharing) , [Baidu Net Disk](https://pan.baidu.com/s/1tv1mEV9yps-LV3VqxRbRHg)), use `config_KITTI.txt`
 - Multiple Sequences Dataset "Gangwan Street" ([Google Drive](https://drive.google.com/file/d/0B82Mv44r3F25ZGhtSWdNZ3FQNUE/view?usp=sharing), [Baidu Net Disk](http://pan.baidu.com/s/1kTzsTwV)), use `config_gangwan.txt`
 
-#### Note
+
+
+## Note
 
 1. For Windows: To ensure that the program works properly, **it is recommended to adjust the graphic card priority in NVidia control pannel, and use the NVidia graphics card** (recommend NVidia GTX 780 or above) for ENFT executable program.
 2. For Linux: Currently,  the Linux version may be not as efficient as that of the Windows version. It still has problems to run with NVidia driver. So for running the program properly, it is recommended to switch the graphic driver to nouveau. We will try to address this problem in the future.
