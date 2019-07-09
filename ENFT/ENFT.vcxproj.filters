@@ -55,6 +55,9 @@
     <Filter Include="Config\0706">
       <UniqueIdentifier>{8481c010-1169-4770-8bff-ae2ae5260ec4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AlgTest">
+      <UniqueIdentifier>{8b6e4270-dfca-4f36-a7bd-65d5f70752e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="param\param_ftr_tracking.txt">
@@ -768,6 +771,12 @@
     <ClInclude Include="FeatureTracking\FeatureMatcherSift.h">
       <Filter>FeatureTracking</Filter>
     </ClInclude>
+    <ClInclude Include="AlgTest\dir_op.h">
+      <Filter>AlgTest</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgTest\test_io.h">
+      <Filter>AlgTest</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FeatureTracking\FeatureExtractorSift.cpp">
@@ -1033,6 +1042,9 @@
       <Filter>Config\0706</Filter>
     </Text>
     <Text Include="..\config\config_0707_road_1_seg_2_3.txt">
+      <Filter>Config\0706</Filter>
+    </Text>
+    <Text Include="..\config\config_0709_debug.txt">
       <Filter>Config\0706</Filter>
     </Text>
   </ItemGroup>

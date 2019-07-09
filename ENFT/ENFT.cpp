@@ -27,6 +27,9 @@
 #include "SequenceRegistration/SequenceRegisteror.h"
 #include "SfM/KeyFrameExtractor.h"
 
+#include "AlgTest/dir_op.h"
+#include "AlgTest/test_io.h"
+
 using namespace ENFT_SfM;
 
 typedef struct Video {
@@ -48,6 +51,7 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
 	bool runGlobalBA = true;
 	const int video_num = int(videos.size());
 	const std::string paramDir = std::string(paramDir_s);
+    std::string outputDir;
 
 	//Init SequenceSet, Vs for SfM, seqs for segmentBA
 	SequenceSet Vs, seqs;
@@ -62,10 +66,10 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
 
 		const int iStart = video.start, iStep = video.step, iEnd = video.end;
 		Sequence &V = Vs[iVideo];
-		V.SetTag(dir, imgFileName, iStart, iStep, iEnd);
-		V.SetCalib(calibFileName, const_focal);
+		V.SetTag(dir, imgFileName, iStart, iStep, iEnd); // input video frame info
+		V.SetCalib(calibFileName, const_focal); // input cammera parameters
 
-		// Initiation every parts
+		// Initiation every procrdure obj's parts
 		ftrTracker.m_ftrExtractorSift.m_tmpTex.Delete(); // weng added
 		ftrTracker.Initialize(V, paramDir + "param_ftr_tracking.txt");
 		trkMatcher1.Initialize(V, paramDir + "param_trk_matching.txt");
@@ -73,7 +77,8 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
 		seqRegister.Initialize(Vs, paramDir + "param_seq_registration.txt", !distortion);
 
 		// If useTmpFile, try to load V.txt
-		const std::string outputDir = strcmp(outputDir_s, "") == 0 ? V.GetDirectory() : std::string(outputDir_s);
+		outputDir = strcmp(outputDir_s, "") == 0 ? V.GetDirectory() : std::string(outputDir_s);
+		if (!DirOp::CheckDirExist(outputDir))	DirOp::MakeDirs(outputDir);
 		char fileName[MAX_LINE_LENGTH];
 		sprintf(fileName, "v%d.txt", iVideo);
 		if (useTmpFile && V.LoadBwithDir((outputDir + fileName).c_str())) {
@@ -92,7 +97,8 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
 			sprintf(fileName, "v%d-cam.txt", iVideo);
 			camTracker.Run(V, useTmpFile ? outputDir + fileName : "");
 		}
-		else {
+		else 
+		{
 			// Slipt sequence and run seqRgister
 			FrameIndex nFrmsPerSeq = FrameIndex(nFrmsMax);
 			while (nFrms - (nFrms / nFrmsPerSeq) * nFrmsPerSeq < nFrmsMin) {
@@ -147,14 +153,14 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
 				iVideoPairs.push_back(SequenceIndexPair(SequenceIndex(iVideo1), SequenceIndex(iVideo2)));
 
 		trkMatcher2.Initialize(Vs, paramDir + "param_trk_matching.txt");
-		trkMatcher2.Run(Vs, iVideoPairs, useTmpFile ? "v-tm.txt" : "", "", "", NULL, false);
+		trkMatcher2.Run(Vs, iVideoPairs, useTmpFile ? outputDir + "v-tm.txt" : "", "", "", NULL, false);
 
 		seqRegister.Initialize(Vs, paramDir + "param_seq_registration.txt", true);
 		seqRegister.Run(Vs);
 	}
 
 
-	// extraction key frame
+	// extract key frame
 
 	float depthAvg, depthMin, depthMax;
 	Vs[0].ComputeFrameDepthRange(0, 0.8f, depthAvg, depthMin, depthMax);
@@ -223,7 +229,10 @@ void RunENFT(std::vector<Video> &videos, const char *paramDir_s, const char *out
 		else {
 			ViewerSequence viewer;
 			viewer.Run(Vs[0]);
+			TestIO::CheckPoint(viewer);
 		}
+
+		
 	}
 }
 

@@ -167,6 +167,8 @@
     <None Include="param\param_trk_matching.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AlgTest\dir_op.h" />
+    <ClInclude Include="AlgTest\test_io.h" />
     <ClInclude Include="CameraTracking\CameraTracker.h" />
     <ClInclude Include="CameraTracking\CameraTrackerDepth.h" />
     <ClInclude Include="Estimation\Estimator.h" />
@@ -491,6 +493,7 @@
   <ItemGroup>
     <Text Include="..\config\config_0707_road_1_seg_2_3.txt" />
     <Text Include="..\config\config_0707_road_2.txt" />
+    <Text Include="..\config\config_0709_debug.txt" />
     <Text Include="..\config\config_gangwan.txt" />
     <Text Include="..\config\config_KITTI.txt" />
     <Text Include="..\config\config_plant.txt" />

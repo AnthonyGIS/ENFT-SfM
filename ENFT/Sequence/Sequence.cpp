@@ -112,7 +112,7 @@ void Sequence::ChangeTag(const std::string &seqDir, const std::string &seqName,
     for(FrameIndex iFrm = 0; iFrm < nFrms; ++iFrm) {
         const std::string &imgFileName1 = tagBkp.GetImageFileName(iFrm);
         const std::string &imgFileName2 = m_tag.GetImageFileName(iFrm);
-        if(imgFileName1 == imgFileName2 || access(imgFileName2.c_str(), 0) == 0)
+        if(imgFileName1 == imgFileName2 || _access(imgFileName2.c_str(), 0) == 0)
             continue;
         const std::string ext1 = IO::ExtractFileExtension(imgFileName1);
         const std::string ext2 = IO::ExtractFileExtension(imgFileName2);

@@ -214,9 +214,10 @@ protected:
 	virtual bool OnMouseDoubleClicked(const CVD::ImageRef &where, const int button);
 	virtual void OnResize(const CVD::ImageRef &size);
 
-protected:
+public: // weng set m_pSeq public
+	const Sequence *m_pSeq; 
 
-	const Sequence *m_pSeq;
+protected:
 	enum DrawProjectionType { DRAW_NO_PROJECTION, DRAW_ALL_PROJECTIONS, DRAW_ACTIVE_PROJECTIONS } m_drawProjType;
 	bool m_imgView;
 	FrameIndex m_minTrkLen;

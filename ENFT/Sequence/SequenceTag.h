@@ -20,6 +20,7 @@
 #ifndef _SEQUENCE_TAG_H_
 #define _SEQUENCE_TAG_H_
 
+// 具体存储视频目录, frame start、step、end info.
 class SequenceTag
 {
 

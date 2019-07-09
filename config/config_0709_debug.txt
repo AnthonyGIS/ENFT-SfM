@@ -1,0 +1,31 @@
+videos_number = 1
+
+# window size
+window_width = 1280
+window_height = 720
+
+# input sequence, image filename format: %d.png
+video_0_image = E:/Projs/enft/data/190706_video/debug_seg1/000000.png 
+# the start/step/end frame index 
+# 0 1 783
+video_0_start = 0
+video_0_step = 1
+video_0_end = 29
+
+# intrinsic params, format: fx fy cx cy
+//calib_file_name = E:/Projs/enft/data/Kitti4ENFT/image_0/calib.txt
+const_focal = 0
+radio_distortion = 1
+
+param_directory = ../ENFT/param/
+output_directory = ../output/
+
+# params for segmentimg image sequence  
+min_frame_number = 100
+max_frame_number = 300
+
+# if save temporary file, when file exist£¬load them and skip corresponding steps(yes - 1, no - 0)
+use_temporary_file = 1
+
+# if visual results(yes - 1, no - 0)
+view = 1

@@ -56,8 +56,7 @@ void ViewerSequence::Run(const Sequence &seq, const FrameIndex iFrmActive) {
     ProgramGL::BindFrameBuffer();
 }
 
-void ViewerSequence::Initialize(const Sequence &seq,
-                                const FrameIndex iFrmActive) {
+void ViewerSequence::Initialize(const Sequence &seq,const FrameIndex iFrmActive) {
     ProgramGL::Initialize(seq.GetImageWidth(), seq.GetImageHeight());
     Viewer::Initialize();
     if(m_pSeq) {
@@ -125,9 +124,7 @@ bool ViewerSequence::PrepareActiveFrame(const FrameIndex iFrmActive) {
         return false;
     float SSE;
     m_iFrmActive = iFrmActive;
-    PrepareSelectedFeature(m_iTrkSelected == INVALID_TRACK_INDEX ?
-                           INVALID_FEATURE_INDEX : m_pSeq->SearchTrackForFrameFeatureIndex(m_iTrkSelected,
-                                   m_iFrmActive));
+    PrepareSelectedFeature(m_iTrkSelected == INVALID_TRACK_INDEX ? INVALID_FEATURE_INDEX : m_pSeq->SearchTrackForFrameFeatureIndex(m_iTrkSelected, m_iFrmActive));
     if(IsFrameSolved(m_iFrmActive)) {
         m_pSeq->ComputeFrameInlierRatioAndMSE(m_iFrmActive, m_nInliers, m_inlierRatio,
                                               SSE, m_MSE);
@@ -182,11 +179,8 @@ bool ViewerSequence::PrepareSelectedTrack(const TrackIndex iTrkSelected) {
         PrepareSelectedFeature(INVALID_FEATURE_INDEX);
     else {
         m_pSeq->PrintTrack(m_iTrkSelected);
-        if(m_iFtrSelected == INVALID_FEATURE_INDEX ||
-                m_pSeq->GetFrameFeatureTrackIndex(m_iFrmActive,
-                        m_iFtrSelected) != m_iTrkSelected)
-            PrepareSelectedFeature(m_pSeq->SearchTrackForFrameFeatureIndex(m_iTrkSelected,
-                                   m_iFrmActive));
+        if(m_iFtrSelected == INVALID_FEATURE_INDEX || m_pSeq->GetFrameFeatureTrackIndex(m_iFrmActive, m_iFtrSelected) != m_iTrkSelected)
+            PrepareSelectedFeature(m_pSeq->SearchTrackForFrameFeatureIndex(m_iTrkSelected,  m_iFrmActive));
     }
     return true;
 }
@@ -203,8 +197,7 @@ bool ViewerSequence::PrepareSelectedFeature(const FeatureIndex iFtrSelected) {
     //  PrepareSelectedTrack(m_pSeq->GetFrameFeatureTrackIndex(m_iFrmActive, m_iFtrSelected));
     //}
     if(m_iFtrSelected != INVALID_FEATURE_INDEX) {
-        PrepareSelectedTrack(m_pSeq->GetFrameFeatureTrackIndex(m_iFrmActive,
-                             m_iFtrSelected));
+        PrepareSelectedTrack(m_pSeq->GetFrameFeatureTrackIndex(m_iFrmActive, m_iFtrSelected));
         m_pSeq->PrintFrameFeature(m_iFrmActive, m_iFtrSelected);
     }
     return true;
@@ -276,27 +269,21 @@ void ViewerSequence::DrawFeaturePoints() {
     glPointSize(2);
     glBegin(GL_LINES);
     const bool camSolved = IsFrameSolved(m_iFrmActive);
-    const Point2D crossSize(FEATURE_CROSS_SIZE * m_factorWinToImg.x(),
-                            FEATURE_CROSS_SIZE * m_factorWinToImg.y());
+    const Point2D crossSize(FEATURE_CROSS_SIZE * m_factorWinToImg.x(),FEATURE_CROSS_SIZE * m_factorWinToImg.y());
     const IntrinsicMatrix &K = m_pSeq->GetIntrinsicMatrix();
     const MeasurementIndex iMea1 = m_pSeq->GetFrameFirstMeasurementIndex(
                                        m_iFrmActive), iMea2 = m_pSeq->GetFrameFirstMeasurementIndex(m_iFrmActive + 1);
     for(MeasurementIndex iMea = iMea1; iMea < iMea2; ++iMea) {
         if(ShouldMeasurementBeHidden(iMea))
             continue;
-        else if((iTrk = m_pSeq->GetMeasurementTrackIndex(iMea)) == INVALID_TRACK_INDEX
-                || m_pSeq->GetTrackLength(iTrk) == 1)
-            glColor3ub(COLOR_FEATURE_SINGLE_R, COLOR_FEATURE_SINGLE_G,
-                       COLOR_FEATURE_SINGLE_B);
+        else if((iTrk = m_pSeq->GetMeasurementTrackIndex(iMea)) == INVALID_TRACK_INDEX || m_pSeq->GetTrackLength(iTrk) == 1)
+            glColor3ub(COLOR_FEATURE_SINGLE_R, COLOR_FEATURE_SINGLE_G, COLOR_FEATURE_SINGLE_B);
         else if(camSolved && IsMeasurementOutlier(iMea))
-            glColor3ub(COLOR_FEATURE_OUTLIER_R, COLOR_FEATURE_OUTLIER_G,
-                       COLOR_FEATURE_OUTLIER_B);
+            glColor3ub(COLOR_FEATURE_OUTLIER_R, COLOR_FEATURE_OUTLIER_G, COLOR_FEATURE_OUTLIER_B);
         else if(m_pSeq->GetTrackState(iTrk) & FLAG_TRACK_STATE_COMMON)
-            glColor3ub(COLOR_FEATURE_COMMON_TRACK_R, COLOR_FEATURE_COMMON_TRACK_G,
-                       COLOR_FEATURE_COMMON_TRACK_B);
+            glColor3ub(COLOR_FEATURE_COMMON_TRACK_R, COLOR_FEATURE_COMMON_TRACK_G, COLOR_FEATURE_COMMON_TRACK_B);
         else if(m_pSeq->GetTrackState(iTrk) & FLAG_TRACK_STATE_MERGED)
-            glColor3ub(COLOR_FEATURE_MERGED_TRACK_R, COLOR_FEATURE_MERGED_TRACK_G,
-                       COLOR_FEATURE_MERGED_TRACK_B);
+            glColor3ub(COLOR_FEATURE_MERGED_TRACK_R, COLOR_FEATURE_MERGED_TRACK_G, COLOR_FEATURE_MERGED_TRACK_B);
         else if(m_pSeq->GetMeasurementState(iMea) & FLAG_MEASUREMENT_STATE_ENFT)
             glColor3ub(COLOR_FEATURE_ENFT_R, COLOR_FEATURE_ENFT_G, COLOR_FEATURE_ENFT_B);
         else
@@ -599,15 +586,13 @@ void ViewerSequence::DrawSceneCameras() {
 void ViewerSequence::DrawScenePoints() {
     //glPointSize(3.0f);
     glBegin(GL_POINTS);
-    const CVD::Rgb<ubyte> clrDefault = CVD::Rgb<ubyte>(COLOR_TRACK_DEFAULT_R,
-                                       COLOR_TRACK_DEFAULT_G, COLOR_TRACK_DEFAULT_B);
+    const CVD::Rgb<ubyte> clrDefault = CVD::Rgb<ubyte>(COLOR_TRACK_DEFAULT_R,COLOR_TRACK_DEFAULT_G, COLOR_TRACK_DEFAULT_B);
     const TrackIndex nTrks = m_pSeq->GetPointsNumber();
     for(TrackIndex iTrk = 0; iTrk < nTrks; ++iTrk) {
         if(!(m_pSeq->GetTrackState(iTrk) & FLAG_TRACK_STATE_SOLVED) ||
                 ShouldTrackBeHidden(iTrk))
             continue;
-        const CVD::Rgb<ubyte> &clr = iTrk < m_pSeq->GetTrackColorsNumber() ?
-                                     m_pSeq->GetTrackColor(iTrk) : clrDefault;
+        const CVD::Rgb<ubyte> &clr = iTrk < m_pSeq->GetTrackColorsNumber() ? m_pSeq->GetTrackColor(iTrk) : clrDefault;
         glColor3ub(clr.red, clr.green, clr.blue);
         glVertex3fv(m_pSeq->GetPoint(iTrk));
     }
@@ -869,8 +854,7 @@ void ViewerSequence::ResetSceneViewProjectionMatrix() {
     const IntrinsicMatrix &K = m_pSeq->GetIntrinsicMatrix();
     const float yzRatio = float(m_pSeq->GetImageHeight() * 0.5f * K.one_over_fy());
     const double fovy = atan(yzRatio) * FACTOR_RAD_TO_DEG * 2;
-    const double aspect = m_pSeq->GetImageWidth() / double(
-                              m_pSeq->GetImageHeight());
+    const double aspect = m_pSeq->GetImageWidth() / double(m_pSeq->GetImageHeight());
 
     glMatrixMode(GL_PROJECTION);
     glPushMatrix();

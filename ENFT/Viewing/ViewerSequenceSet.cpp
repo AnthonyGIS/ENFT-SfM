@@ -36,8 +36,7 @@ void ViewerSequenceSet::Run(const SequenceSet &seqs,
     ProgramGL::BindFrameBuffer();
 }
 
-void ViewerSequenceSet::Initialize(const SequenceSet &seqs,
-                                   const SequenceIndex iSeqActive) {
+void ViewerSequenceSet::Initialize(const SequenceSet &seqs, const SequenceIndex iSeqActive) {
     if(m_pSeqSet != &seqs) {
         m_iSeqActive = iSeqActive;
         m_iFrmActive = m_iFrmImg = m_iFrmScn = INVALID_FRAME_INDEX;

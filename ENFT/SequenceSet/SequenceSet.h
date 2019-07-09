@@ -136,6 +136,8 @@ class SegmentSetBundleAdjustorData2DSimilarity;
 class SequenceTransformationOptimizerDataSimilarity;
 class SequenceTransformationOptimizerDataScale;
 
+
+// weng: 包含视频输入的所有相关操作。可以包含多个视频sequence序列。
 class SequenceSet
 {
 
